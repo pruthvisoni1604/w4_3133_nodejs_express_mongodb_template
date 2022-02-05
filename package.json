@@ -1,7 +1,7 @@
 {
   "name": "w4_3133_nodejs_express_mongodb_template",
   "version": "1.0.0",
-  "description": "Advanve mongodb, mongoos and express",
+  "description": "Advance mongodb, mongoos and express",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pritamworld/w4_3133_nodejs_express_mongodb_template.git"
+    "url": "git+https://github.com/pruthvisoni1604/w4_3133_nodejs_express_mongodb_template.git"
   },
   "keywords": [
     "mongoose",
@@ -18,12 +18,12 @@
     "REST",
     "API"
   ],
-  "author": "Pritesh Patel",
+  "author": "Pruthvi Soni",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pritamworld/w4_3133_nodejs_express_mongodb_template/issues"
+    "url": "https://github.com/pruthvisoni1604/w4_3133_nodejs_express_mongodb_template/issues"
   },
-  "homepage": "https://github.com/pritamworld/w4_3133_nodejs_express_mongodb_template#readme",
+  "homepage": "https://github.com/pruthvisoni1604/w4_3133_nodejs_express_mongodb_template#readme",
   "dependencies": {
     "express": "^4.17.2",
     "mongoose": "^6.2.0"

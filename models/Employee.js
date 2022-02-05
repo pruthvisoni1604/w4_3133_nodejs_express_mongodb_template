@@ -2,31 +2,63 @@ const mongoose = require('mongoose');
 
 const EmployeeSchema = new mongoose.Schema({
   firstname: {
-    type: String
+    type: String,
+    required: [true, 'Please enter first name'],
+    trim: true,
+    lowercase: true
   },
   lastname: {
-    type: String
+    type: String,
+    alias: 'surname', //familyname
+    required: true,
+    trim: true,
+    Lowercase: true
   },
   email: {
-    type: String
+    type: String,
+    required: true,
+    trim: true,
+    uppercase: true,
+    minlength:5,
+    maxlength:50,
+    validate: function(value) {
+      var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      return emailRegex.test(value);
+    }
   },
   gender: {
-    type: String
+    type: String,
+    required: true,
+    enum: ['male', 'female', 'other']
   },
   city:{
-    type: String
+    type: String,
+    required: true,
+    trim: true
   },
   designation: {
-    type: String
+    type: String,
+    required: true,
+    trim: true
   },
   salary: {
-    type: Number
+    type: Number,
+    default: 0.0,
+
+    validate: function(value){
+      if(value < 0){
+        new Error( 'Negative salary not allowed')
+      }
+    }
   },
-  created: { 
-    type: Date
+  created: {
+    type: Date,
+    default: Date.now,
+    alias: 'createdat'
   },
-  updatedat: { 
-    type: Date
+  updatedat: {
+    type: Date,
+    default: Date.now
   },
 });
 
